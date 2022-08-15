@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Consumer App</string>
+    <string name="illustration_description">Illustration</string>
+    <string name="string_illustration_favorite_not_found">you still don\'t have a favorite developer, let\'s search and find your favorite developer</string>
+    <string name="string_username">aldisusanto</string>
+    <string name="string_typeUser">User</string>
+</resources>

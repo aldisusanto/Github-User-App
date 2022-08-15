@@ -1,0 +1,196 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding"
+            android:paddingTop="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/black_300"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.365" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_user"
+                android:layout_width="@dimen/image_user_detail_size"
+                android:layout_height="@dimen/image_user_detail_size"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_account_circle_24"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ToggleButton
+                android:id="@+id/btn_toggle_favorite"
+                android:layout_width="@dimen/drawable_favorite_size"
+                android:layout_height="@dimen/drawable_favorite_size"
+                android:background="@drawable/ic_favorite_toggle"
+                android:enabled="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textOff=""
+                android:textOn=""
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_user" />
+
+            <TextView
+
+                android:id="@+id/text_name"
+                style="@style/textContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:textSize="35sp"
+                app:layout_constraintEnd_toEndOf="@+id/img_user"
+                app:layout_constraintStart_toStartOf="@+id/img_user"
+                app:layout_constraintTop_toBottomOf="@+id/img_user"
+                tools:text="Aldi Susanto" />
+
+            <TextView
+                android:id="@+id/text_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:fontFamily="@font/galdeano"
+                android:padding="10dp"
+                android:textSize="24sp"
+                app:drawableStartCompat="@drawable/ic_baseline_work_black_24"
+                app:layout_constraintEnd_toEndOf="@+id/text_name"
+                app:layout_constraintStart_toStartOf="@+id/text_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_name"
+                tools:text="Google Inc" />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:fontFamily="@font/galdeano"
+                android:padding="10dp"
+                android:textSize="24sp"
+                app:drawableStartCompat="@drawable/ic_baseline_location_on_black_24"
+                app:layout_constraintEnd_toEndOf="@+id/text_company"
+                app:layout_constraintStart_toStartOf="@+id/text_company"
+                app:layout_constraintTop_toBottomOf="@+id/text_company"
+                tools:text="New Delhi, India" />
+
+
+            <TextView
+
+                android:id="@+id/text_repository"
+                style="@style/textContentDetailB"
+                android:layout_marginTop="24dp"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/text_location"
+                app:layout_constraintHorizontal_bias="0.129"
+                app:layout_constraintStart_toStartOf="@+id/text_location"
+                app:layout_constraintTop_toBottomOf="@+id/text_location"
+                tools:text="100" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/textContentDetailN"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_repository"
+                app:layout_constraintEnd_toEndOf="@+id/text_repository"
+                app:layout_constraintStart_toStartOf="@+id/text_repository"
+                app:layout_constraintTop_toBottomOf="@+id/text_repository" />
+
+            <TextView
+                android:id="@+id/text_followers"
+                style="@style/textContentDetailB"
+                android:layout_marginTop="24dp"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="@+id/text_location"
+                app:layout_constraintHorizontal_bias="0.511"
+                app:layout_constraintStart_toStartOf="@+id/text_location"
+                app:layout_constraintTop_toBottomOf="@+id/text_location"
+                tools:text="100" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/textContentDetailN"
+                android:layout_marginTop="8dp"
+                android:text="@string/string_followers"
+                app:layout_constraintEnd_toEndOf="@+id/text_followers"
+                app:layout_constraintStart_toStartOf="@+id/text_followers"
+                app:layout_constraintTop_toBottomOf="@+id/text_followers" />
+
+
+            <TextView
+
+                android:id="@+id/text_following"
+                style="@style/textContentDetailB"
+                android:layout_marginTop="24dp"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="@+id/text_location"
+                app:layout_constraintHorizontal_bias="0.895"
+                app:layout_constraintStart_toStartOf="@+id/text_location"
+                app:layout_constraintTop_toBottomOf="@+id/text_location"
+                tools:text="100" />
+
+            <TextView
+                style="@style/textContentDetailN"
+                android:layout_marginTop="9dp"
+                android:text="@string/string_following"
+                app:layout_constraintEnd_toEndOf="@+id/text_following"
+                app:layout_constraintStart_toStartOf="@+id/text_following"
+                app:layout_constraintTop_toBottomOf="@+id/text_following" />
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:tabIndicatorColor="@color/black_300"
+                app:tabTextColor="@color/black_300" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

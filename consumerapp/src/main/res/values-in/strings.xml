@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Consumer App</string>
+    <string name="illustration_description">Ilustrasi</string>
+    <string name="string_illustration_favorite_not_found">Anda masih belum memiliki pengembang favorit, mari cari dan temukan pengembang favorit Anda</string>
+    <string name="string_username">aldisusanto</string>
+    <string name="string_typeUser">Pengguna</string>
+</resources>
